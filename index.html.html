@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Vigilancia de la Salud (RD 1299/2006)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; }
+        p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;}
+        .tab-button { padding: 10px 20px; border: none; background: #ecf0f1; color: #2c3e50; cursor: pointer; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .tab-button:hover { background: #bdc3c7; }
+        .tab-button.active { background: #3498db; color: white; }
+        .content { display: none; }
+        .content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .card { background: #fafafa; border-left: 5px solid #3498db; padding: 15px; margin-bottom: 15px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h3 { margin-top: 0; color: #2980b9; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .box { background: white; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .box h4 { margin-top: 0; color: #e67e22; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .legal { font-size: 0.9em; color: #7f8c8d; font-style: italic; }
+        ul { padding-left: 20px; margin-top: 5px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Protocolos Médicos y Enfermedades Profesionales</h1>
+        <p class="subtitle">Matriz Interactiva basada en el Real Decreto 1299/2006</p>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('industria', this)">Industria y Minería</button>
+            <button class="tab-button" onclick="openTab('quimico', this)">Químico y Agrícola</button>
+            <button class="tab-button" onclick="openTab('admin', this)">Administrativo y Montaje</button>
+            <button class="tab-button" onclick="openTab('sanidad', this)">Sanidad y Laboratorio</button>
+        </div>
+
+        <div id="industria" class="content active">
+            <div class="card">
+                <h3>Sector Industria Pesada y Minería</h3>
+                <div class="grid">
+                    <div class="box">
+                        <h4>Riesgos Principales</h4>
+                        <p>Inhalación de polvo de sílice y amianto, exposición a ruido continuo superior a 80 dB(A), uso de herramientas vibrátiles.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Enfermedad Profesional y Normativa</h4>
+                        <p><strong>Silicosis:</strong> Grupo 4, Agente A, Subagente 01.</p>
+                        <p><strong>Asbestosis:</strong> Grupo 4, Agente C, Subagente 01.</p>
+                        <p><strong>Hipoacusia (Ruido):</strong> Grupo 2, Agente A, Subagente 01.</p>
+                        <p class="legal">RD 1299/2006</p>
+                    </div>
+                    <div class="box">
+                        <h4>Pruebas Médicas Específicas</h4>
+                        <ul>
+                            <li>RX de Tórax (Clasificación OIT)</li>
+                            <li>Espirometría</li>
+                            <li>Audiometría tonal en cabina</li>
+                            <li>Prueba de Allen y Test de frío (vibraciones)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quimico" class="content">
+            <div class="card">
+                <h3>Sector Químico y Agrícola</h3>
+                <div class="grid">
+                    <div class="box">
+                        <h4>Riesgos Principales</h4>
+                        <p>Contacto con tóxicos, metales pesados (plomo), pesticidas (órgano fosforados) y vapores químicos.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Enfermedad Profesional y Normativa</h4>
+                        <p><strong>Saturnismo (Plomo):</strong> Grupo 1, Agente A, Subagente 09.</p>
+                        <p><strong>Intoxicación por Órgano Fosforados:</strong> Grupo 1, Agente S, Subagente 01.</p>
+                        <p><strong>Asma Laboral:</strong> Grupo 4, Agente H, Subagente 02.</p>
+                        <p class="legal">RD 1299/2006</p>
+                    </div>
+                    <div class="box">
+                        <h4>Pruebas Médicas Específicas</h4>
+                        <ul>
+                            <li>Biomonitorización toxicológica (en sangre u orina)</li>
+                            <li>Espirometría con prueba broncodilatadora</li>
+                            <li>Test del parche (alergias cutáneas)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="admin" class="content">
+            <div class="card">
+                <h3>Sector Administrativo y Cadenas de Montaje</h3>
+                <div class="grid">
+                    <div class="box">
+                        <h4>Riesgos Principales</h4>
+                        <p>Movimientos repetitivos, posturas forzadas, uso prolongado de PVD (Pantallas de Visualización de Datos).</p>
+                    </div>
+                    <div class="box">
+                        <h4>Enfermedad Profesional y Normativa</h4>
+                        <p><strong>Síndrome del Túnel Carpiano:</strong> Grupo 2, Agente F, Subagente 02 (Cód. 2F0201).</p>
+                        <p><strong>Epicondilitis (Codo de tenista):</strong> Grupo 2, Agente D, Subagente 02 (Cód. 2D0201).</p>
+                        <p class="legal">RD 1299/2006</p>
+                    </div>
+                    <div class="box">
+                        <h4>Pruebas Médicas Específicas</h4>
+                        <ul>
+                            <li>Pruebas neurológicas manuales (maniobras de Phalen, Tinel)</li>
+                            <li>Electromiograma (EMG) si hay sospecha de atrapamiento nervioso</li>
+                            <li>Control exhaustivo de agudeza y fatiga visual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sanidad" class="content">
+            <div class="card">
+                <h3>Sector Sanidad y Laboratorio</h3>
+                <div class="grid">
+                    <div class="box">
+                        <h4>Riesgos Principales</h4>
+                        <p>Exposición a agentes biológicos infecciosos, contacto con fluidos corporales, lavado frecuente de manos y uso de guantes.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Enfermedad Profesional y Normativa</h4>
+                        <p><strong>Enfermedades infecciosas:</strong> Grupo 3, Agente A, Subagente 01 (Cód. 3A0101).</p>
+                        <p><strong>Dermatosis profesional:</strong> Grupo 5, Agente A, Subagente 01.</p>
+                        <p class="legal">RD 1299/2006</p>
+                    </div>
+                    <div class="box">
+                        <h4>Pruebas Médicas Específicas</h4>
+                        <ul>
+                            <li>Serología completa de marcadores virales (Hepatitis B, C, VIH)</li>
+                            <li>Prueba de Mantoux o QuantiFERON en sangre (Tuberculosis)</li>
+                            <li>Revisión cutánea de eccemas o dermatitis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(tabName, btn) {
+            var i, content, tabbuttons;
+            // Ocultar todo el contenido
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            // Quitar clase active a todos los botones
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            // Mostrar contenido actual y añadir clase active al botón clicado
+            document.getElementById(tabName).classList.add("active");
+            btn.classList.add("active");
+        }
+    </script>
+</body>
+</html>
